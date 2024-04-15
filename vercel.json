@@ -1,0 +1,38 @@
+{
+    "version": 2,
+    "builds": [
+        { "src": "/api/index.php", "use": "vercel-php@0.6.1" },
+        { "src": "/public/**", "use": "@vercel/static" }
+    ],
+    "routes": [
+        {
+            "src": "/(css|js)/(.*)",
+            "dest": "public/$1/$2"
+        },
+        {
+            "src": "/(.*)",
+            "dest": "/api/index.php"
+        }
+    ],
+    "env": {
+        "APP_KEY": "base64:G6ZtUMbvFszAaJuqT7256tuvThPqom1f6ANDwjHHIWs=",
+        "APP_ENV": "production",
+        "APP_DEBUG": "true",
+        "JWT_SECRET": "t7RfJGcZ0IBYCiHRblRXW0Pyx6mFTVOnEcpWQpcuvSpPjYj7bVojbZ8NwY7g5ryH",
+        "DATABASE_URL": "mysql://3LH8VLx22DeT5zk.root:aHsC8WWSFgCdrqBG@gateway01.eu-central-1.prod.aws.tidbcloud.com:4000/test",
+        "APP_URL": "https://laravel-api-black.vercel.app/",
+        "APP_CONFIG_CACHE": "/tmp/config.php",
+        "APP_EVENTS_CACHE": "/tmp/events.php",
+        "APP_PACKAGES_CACHE": "/tmp/packages.php",
+        "APP_ROUTES_CACHE": "/tmp/routes.php",
+        "APP_SERVICES_CACHE": "/tmp/services.php",
+        "VIEW_COMPILED_PATH": "/tmp",
+        "CACHE_DRIVER": "array",
+        "LOG_CHANNEL": "stderr",
+        "SESSION_DRIVER": "cookie",
+        "AWS_ACCESS_KEY_ID": "AKIA54RILER3IUM5PISM",
+        "AWS_SECRET_ACCESS_KEY": "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",
+        "AWS_DEFAULT_REGION": "eu-west-3",
+        "AWS_BUCKET": "laravel-api-ecommerce"
+    }
+}
